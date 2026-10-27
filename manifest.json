@@ -1,0 +1,48 @@
+{
+  "id": "zapret2",
+  "name": "zapret2",
+  "version": "1.1.0",
+  "author": "TriOda26",
+  "description": {
+    "ru": "Вкуси запретный плод: яблоко на панели, обход DPI через zapret2, свои профили, домены, журнал и стратегии.",
+    "en": "Taste the forbidden fruit: an apple in the bar, DPI bypass through zapret2, your own profiles, domains, a journal and strategies."
+  },
+  "icon": "lock",
+  "enabledByDefault": false,
+  "themes": [
+    "pixel",
+    "mac"
+  ],
+  "realms": [
+    "heaven",
+    "hell"
+  ],
+  "category": "Network",
+  "license": "0BSD",
+  "tags": [
+    "network",
+    "dpi",
+    "zapret",
+    "bypass",
+    "systemd"
+  ],
+  "dependencies": [
+    "zapret2",
+    "systemd",
+    "polkit"
+  ],
+  "permissions": [
+    "manage systemd unit zapret2.service",
+    "read journalctl -u zapret2.service",
+    "write ~/.config/zapret2",
+    "optional pkexec helper for polkit and hostlist symlink"
+  ],
+  "settingsNear": "network",
+  "main": "src/Main.qml",
+  "barWidget": "src/BarWidget.qml",
+  "desktopTitle": "zapret",
+  "desktopWidget": "src/DesktopWidget.qml",
+  "menuComponent": "src/Menu.qml",
+  "launcher": "src/Launcher.qml",
+  "settings": "src/Settings.qml"
+}
